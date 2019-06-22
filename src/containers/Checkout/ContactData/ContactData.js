@@ -48,8 +48,8 @@ class ContactData extends Component {
         value: "",
         validation: {
           required: true,
-          minLength: 5,
-          maxLength: 5,
+          minLength: 4,
+          maxLength: 8,
         },
         valid: false,
         touched: false,
@@ -118,7 +118,7 @@ class ContactData extends Component {
     const updatedFormElement = updateObject(this.state.orderForm[inputIdentifier], {
       value: event.target.value,
       valid: checkValidity(event.target.value, this.state.orderForm[inputIdentifier].validation),
-      touch: true
+      touched: true
     })
 
     const updatedOrderForm = updateObject( this.state.orderForm,{
